@@ -27,19 +27,21 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         this.smsC = new SmsCapture();
         registerReceiver(this.smsC, new IntentFilter("android.provider.Telephony.SMS_RECEIVED"));
+        Log.d("ewe","mensaje Onresume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         unregisterReceiver(smsC);
+        Log.d("djbfu","mensaje Onpause");
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("app", "app iniciada");
+        Log.d("app", "mensaje app iniciada");
     }
 
 

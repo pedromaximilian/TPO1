@@ -10,7 +10,8 @@ public class SmsCapture extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("recibido", "Mensaje Recibido");
+        Toast.makeText(context, "Incomming Message", Toast.LENGTH_LONG).show();
+        Log.d("recibido", "mensaje recepcion ok");
 
 
     }
